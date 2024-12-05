@@ -1,0 +1,300 @@
+\documentclass[pdflatex,compress,9pt,
+	xcolor={dvipsnames,dvipsnames,svgnames,x11names,table},
+	hyperref={colorlinks = true,breaklinks = true, urlcolor = NavyBlue, breaklinks = true}]{beamer}
+	
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+%\usefonttheme{structuresmallcapsserif}
+\usepackage{bookman}
+
+\usetheme{Warsaw}
+%\usecolortheme{seahorse}Teal DarkCyan
+%\usecolortheme{wolverine} 
+\usecolortheme[named=Crimson]{structure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{gensymb} % degree symbol
+\usepackage[super]{nth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ----------------------------------------------------------------------------
+% *** START BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+\usepackage[
+	backend=biber, 
+%	style = numeric,
+	style=apa,
+	maxbibnames=99,
+%	citestyle=authoryear,
+	citestyle=numeric,
+	giveninits=true,
+	isbn=true,
+	url=true,
+	natbib=true,
+	sorting=ndymdt,
+	bibencoding=utf8,
+	useprefix=false,
+	language=auto, 
+	autolang=other,
+	backref=true,
+	backrefstyle=none,
+	indexing=cite,
+]{biblatex}
+\DeclareSortingTemplate{ndymdt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort{
+    \field{sortname}
+    \field{author}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort[direction=descending]{
+    \field{sortyear}
+    \field{year}
+    \literal{9999}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{month}
+    \literal{99}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=2,padchar=0]{day}
+    \literal{99}
+  }
+  \sort{
+    \field{sorttitle}
+  }
+  \sort[direction=descending]{
+    \field[padside=left,padwidth=4,padchar=0]{volume}
+    \literal{9999}
+  }
+}
+
+\addbibresource{Minsk.bib}
+\renewcommand*{\bibfont}{\tiny} % \tiny \scriptsize \footnotesize
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+% ----------------------------------------------------------------------------
+% *** END BIBLIOGRAPHY <<<
+% ----------------------------------------------------------------------------
+% Путь к файлам с иллюстрациями
+\graphicspath{{fig/}} % path to folder with Figures
+
+\title{Biblioteca Salaborsa \\
+Bologna, Italia}\vspace{2em}
+ 
+\subtitle{\vspace*{0.5cm}Presentato a: \\
+231 Corso italiano semestrale Livello: B1.3\\
+Insegnante: Losi Liliana \\
+Piazza San Giovanni in Monte 4\\
+Bologna, Ilatia}
+
+\author{Polina Lemenkova}
+\date{dicembre 10, 2024}
+
+\begin{document}
+\begin{frame}
+           \titlepage
+\end{frame}
+
+\section{Introduction}
+
+\subsection{Study Area}
+\begin{frame}{Study Area: P\"{a}rnu Region, Estonia}
+\begin{minipage}[0.4\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=4.2cm]{Fig_01.jpg}
+\end{figure}
+\begin{block}{Study Area}
+The research region encompasses coastal area of Baltic Sea: south-western Estonia
+\end{block}
+ 
+\begin{alertblock}{Spatial extent}
+Spatial extent of the study area is limited to the surroundings of P\"{a}rnu County.
+\end{alertblock}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=4.5cm]{Fig_01.jpg}
+\end{figure}
+\end{column}
+\end{columns}
+\end{minipage}
+\end{frame}
+
+\subsection{Landscapes}
+\begin{frame}\frametitle{Landscapes}
+
+\begin{block}{South-West Estonia: Unique Environment}
+South-west Estonia is known for unique environmental settings: mild maritime climate, broad beaches, coniferous pine forests on the coastal zone
+\end{block}
+
+\begin{alertblock}{Landscapes}
+Landscapes here are rich and world-known for their diversity, variability, unique composition structure and high esthetic value
+\end{alertblock}
+
+\begin{examples}{Types of Landscapes}
+Landscape types include, for example, mixed and broadleaved forests, traditional agricultural semi-natural landscapes, wooded meadows, plant communities, heathland, bogs and moors, complex anthropogenic areas with different land use structure, shrubland, grasslands, birch-dominating coastal areas and flooded meadows
+\end{examples}
+
+\end{frame}
+
+\section{Examples of Landscapes}
+\subsection{Baltic Sea Coasts}
+\begin{frame}\frametitle{Examples of Landscapes: Baltic Sea Coasts}
+\begin{examples}{Landscapes:}
+Baltic Sea Coasts. Photos: author.
+\end{examples}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=9.0cm]{Fig_01.jpg}
+\end{figure}
+\end{frame}
+
+\subsection{Marine Landscapes: P\"{a}rnu}
+\begin{frame}\frametitle{Marine Landscapes: P\"{a}rnu Coasts}
+\begin{examples}{Marine Landscapes:}
+ P\"{a}rnu Coasts. Photos: author.
+\end{examples}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=9.0cm]{Fig_01.jpg}
+\end{figure}
+\end{frame}
+
+\subsection{Lacustrine landscapes: Luitemaaa}
+\begin{frame}\frametitle{Lacustrine landscapes: Luitemaa Nature Conservation Area}
+\begin{examples}{Lacustrine landscapes:}
+Luitemaa Nature Conservation Area. Photos: author.
+\end{examples}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=9.0cm]{Fig_01.jpg}
+\end{figure}
+\end{frame}
+
+\section{Methods}
+\begin{frame}\frametitle{Methods}
+
+\begin{block}{GIS Projects}
+The GIS projects has been organized and executed in two different software: \alert{Arc GIS 10.0} and \alert{IDRISI GIS Andes 15.0}.
+\end{block}
+
+\begin{block}{Landsat TM}
+The raster processing GIS approach and classification was applied in the current work towards Landsat TM two images."
+\end{block}
+
+\begin{block}{ISOCLUST}
+The method is based on the ISOCLUST unsupervised classification executed by means of IDRISI GIS.
+\end{block}
+
+\begin{block}{Machine Learning}
+The ISOCLUST available in IDRISI GIS performs the most of the image processing workflow in semi-automatically regime
+\end{block}
+
+\begin{block}{Land Cover Classes}
+It results in a map with pre-defined number of 16 land class categories which enable to compare two different stages of landscape development: \alert{“earlier”} and \alert{“now”}.
+\end{block}
+
+\begin{block}{Objectivity}
+The ISOCLUST method was chosen, since it enables to avoid subjectivity in classification.
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Workflow Step-1}
+
+\begin{block}{IMPORT}
+Initially, the data of Landsat TM were imported to IDRISI Andes GIS from \alert{GeoTIFF} format to IDRISI specific format \alert{.rst}, through \alert{Data Provider Format} import.\\ As each Landsat TM scene is a multispectral image with several spectral bands, each band was displayed and visualized as a separate image.
+\end{block}
+
+\begin{block}{COLOR COMPOSITE}
+Afterwords, the images were composed using \alert{Color Composite} function. \\
+The combination of three bands was made as a single color composite image (bands 2-3-4).\\
+ This composition displays urban areas distinctively, which enables to clearly recognize them
+\end{block}
+
+\begin{block}{PROJECT}
+Then data were organized in a created project in \alert{IDRISI GIS}.
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Land Cover Classes}
+\begin{minipage}[0.4\textheight]{\textwidth}
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\small{\begin{itemize}
+	\item discontinuous urban fabric
+	\item industrial or commercial units
+	\item green urban areas
+	\item pastures
+	\item complex cultivation patterns
+	\item agriculture lands with grass
+	\item broad-leaved forest
+	\item coniferous forest
+	\item mixed forest
+	\item natural grassland
+	\item moors and heathlands
+	\item transitional woodland
+	\item beaches, dunes, sand
+	\item island marshes
+	\item water bodies
+	\item sea and ocean
+\end{itemize}}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=4.5cm]{Fig_01.jpg}
+\end{figure}
+\end{column}
+\end{columns}
+\end{minipage}
+\end{frame}
+
+\section{Thanks}
+\begin{frame}{Thanks}
+\emph{Thank you for attention !}\\
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=8.0cm]{Fig_01.jpg}
+\end{figure}
+
+\normalsize
+Acknowledgement: \\
+The research has been done at the University of Tartu \\
+under support of DoRa grant (ESF, Estonia).\\
+The University of Tartu provided \alert{data} and \alert{software}:\\
+ \alert{CORINE} vector layers, \alert{IDRISI GIS} 15.0 and \alert{ArcGIS} 10.0.
+\end{frame}
+	
+%%%%%%%%%%% Bibliography %%%%%%%	
+
+\end{document}
+%Changing the font size locally (from biggest to smallest):	
+%\Huge
+%\huge
+%\LARGE
+%\Large
+%\large
+%\normalsize (default)
+%\small
+%\footnotesize
+%\scriptsize
+%\tiny
+
+\end{document}
